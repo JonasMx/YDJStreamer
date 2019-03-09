@@ -20,7 +20,7 @@ Pod::Spec.new do |s|
   s.summary      = "YDJStreamer a server to stream music"
   s.description  = "YDJStreamer allow the user to create a server to retrieve and stream his iphone music in PCM format"
 
-  s.homepage     = "http://you.dj/"
+  s.homepage     = "https://github.com/JonasMx/YDJStreamer"
   # s.screenshots  = "www.example.com/screenshots_1.gif", "www.example.com/screenshots_2.gif"
 
 
@@ -31,8 +31,8 @@ Pod::Spec.new do |s|
   #  Popular ones are 'MIT', 'BSD' and 'Apache License, Version 2.0'.
   #
 
-  s.license      = "MIT"
-  # s.license      = { :type => "MIT", :file => "FILE_LICENSE" }
+
+  s.license      = { :type => "MIT", :file => "LICENSE" }
 
 
   # ――― Author Metadata  ――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
