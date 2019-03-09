@@ -17,7 +17,7 @@ class YDJConverter {
                                          AVLinearPCMIsNonInterleaved: 0]
     
     var didConvertData:((YDJConverter, Data) -> Void)?
-    var didFinishConvertion:((YDJConverter) -> Void)?
+    var didFinishConversion:((YDJConverter) -> Void)?    
     
     private let media:MPMediaItem
     private var assetReader:AVAssetReader
@@ -48,7 +48,7 @@ class YDJConverter {
     func start() {
         assetReader.startReading()
         task = DispatchWorkItem {
-            while self.assetReader.status == AVAssetReader.Status.reading
+            while self.assetReader.status == .reading
             {
                 if let sampleBufferRef = self.trackOutput.copyNextSampleBuffer()
                 {
@@ -62,12 +62,12 @@ class YDJConverter {
                         
                         CMSampleBufferInvalidate(sampleBufferRef)
                     }
-                }
+                }                
             }
             
-            self.didFinishConvertion?(self)
+            self.didFinishConversion?(self)
         }
-                
+        
         DispatchQueue(label: UUID.init().uuidString).async(execute: task!)
     }
     

@@ -39,9 +39,9 @@ open class YDJServer {
             
             let response = GCDWebServerStreamedResponse(contentType: "raw", asyncStreamBlock: { (completion) in
                 converter.didConvertData = { _, data in completion(data, nil) }
-                converter.didFinishConvertion = { _ in
+                converter.didFinishConversion = { converter in
                     completion(Data(), nil)
-                    self.converters.removeValue(forKey: playerID)
+                    self.removeConverterOfPlayerWithID(playerID, converter.mediaID)
                 }
             })
             
@@ -64,10 +64,15 @@ open class YDJServer {
             guard let playerID = request.query?["player"] as? String else { return GCDWebServerResponse(statusCode: 500) }
             if let converter = self.converterForPlayer(playerID) {
                 converter.cancel()
-                self.converters.removeValue(forKey: playerID)
             }
             
             return GCDWebServerResponse(statusCode: 200)
+        }
+    }
+    
+    private func removeConverterOfPlayerWithID(_ id:String, _ mediaID:UInt64) {
+        if let index = converters.firstIndex(where: { (playerID, converter) -> Bool in return playerID == id && converter.mediaID == mediaID }) {
+            converters.remove(at: index)
         }
     }
     
@@ -84,7 +89,7 @@ open class YDJServer {
     }
     
     private func converterForPlayer(_ id:String) -> YDJConverter? {
-        return self.converters.first(where: { (playerID, _) -> Bool in return playerID == id })?.value
+        return converters.first(where: { (playerID, _) -> Bool in return playerID == id })?.value
     }
 
     public func start() -> Bool {
