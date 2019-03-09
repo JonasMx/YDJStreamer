@@ -60,8 +60,8 @@ open class YDJServer {
             return GCDWebServerDataResponse(jsonObject: response.toJSON())
         }
         
-        server.addHandler(forMethod: "DELETE", pathRegex: "/song/([0-9]+)", request: GCDWebServerRequest.self) { (request) -> GCDWebServerResponse? in
-            guard let playerID = request.query?["player"] as? String else { return GCDWebServerResponse(statusCode: 500) }
+        server.addHandler(forMethod: "DELETE", pathRegex: "/player/([0-9]+)", request: GCDWebServerRequest.self) { (request) -> GCDWebServerResponse? in
+            let playerID = request.url.lastPathComponent
             if let converter = self.converterForPlayer(playerID) {
                 converter.cancel()
             }

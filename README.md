@@ -78,13 +78,12 @@ HTTP/1.1 500 OK         If The playerID is not specified
 
 ### Cancel a song conversion
 ```
-HTTP/1.1 DELETE http://[::1]:8080/song/[songID]?player=[playerID]
+HTTP/1.1 DELETE http://[::1]:8080/player/[ID]
 ```
 
 The server return a response like
 ```
 HTTP/1.1 200 OK
-HTTP/1.1 500 OK         If the playerID is not speficied
 ```
 
 
