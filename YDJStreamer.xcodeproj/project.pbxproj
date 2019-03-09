@@ -7,15 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		72C8F16CB3CB56F5C3211A98 /* Pods_YDJStreamer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 309D7982EB3B38B7158F118A /* Pods_YDJStreamer.framework */; };
 		DD08B34D222C0B4000044043 /* YDJStreamer.h in Headers */ = {isa = PBXBuildFile; fileRef = DD08B34B222C0B4000044043 /* YDJStreamer.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		DD08B37D222C0D5400044043 /* YDJServer.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD08B37C222C0D5400044043 /* YDJServer.swift */; };
 		DD3DB422222D614A007DB7F3 /* YDJSongsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD3DB421222D614A007DB7F3 /* YDJSongsResponse.swift */; };
-		DD3DB424222D741E007DB7F3 /* YDJConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD3DB423222D741E007DB7F3 /* YDJConverter.swift */; };
+		DDFFEC762232AC0200C8E441 /* YDJConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDFFEC752232AC0200C8E441 /* YDJConverter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		309D7982EB3B38B7158F118A /* Pods_YDJStreamer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_YDJStreamer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B5CD8E4B3ECBE2337495E9C5 /* Pods-YDJStreamer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YDJStreamer.debug.xcconfig"; path = "Pods/Target Support Files/Pods-YDJStreamer/Pods-YDJStreamer.debug.xcconfig"; sourceTree = "<group>"; };
 		DCC3DE7C1D211DB320B3A258 /* Pods-YDJStreamer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YDJStreamer.release.xcconfig"; path = "Pods/Target Support Files/Pods-YDJStreamer/Pods-YDJStreamer.release.xcconfig"; sourceTree = "<group>"; };
 		DD08B348222C0B4000044043 /* YDJStreamer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = YDJStreamer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -23,7 +21,7 @@
 		DD08B34C222C0B4000044043 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DD08B37C222C0D5400044043 /* YDJServer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YDJServer.swift; sourceTree = "<group>"; };
 		DD3DB421222D614A007DB7F3 /* YDJSongsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YDJSongsResponse.swift; sourceTree = "<group>"; };
-		DD3DB423222D741E007DB7F3 /* YDJConverter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YDJConverter.swift; sourceTree = "<group>"; };
+		DDFFEC752232AC0200C8E441 /* YDJConverter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YDJConverter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,7 +29,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				72C8F16CB3CB56F5C3211A98 /* Pods_YDJStreamer.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -41,7 +38,6 @@
 		680800147AAA05E0D4BE262C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				309D7982EB3B38B7158F118A /* Pods_YDJStreamer.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -79,8 +75,8 @@
 				DD08B34B222C0B4000044043 /* YDJStreamer.h */,
 				DD08B34C222C0B4000044043 /* Info.plist */,
 				DD08B37C222C0D5400044043 /* YDJServer.swift */,
-				DD3DB423222D741E007DB7F3 /* YDJConverter.swift */,
 				DD3DB421222D614A007DB7F3 /* YDJSongsResponse.swift */,
+				DDFFEC752232AC0200C8E441 /* YDJConverter.swift */,
 			);
 			path = YDJStreamer;
 			sourceTree = "<group>";
@@ -186,8 +182,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DDFFEC762232AC0200C8E441 /* YDJConverter.swift in Sources */,
 				DD08B37D222C0D5400044043 /* YDJServer.swift in Sources */,
-				DD3DB424222D741E007DB7F3 /* YDJConverter.swift in Sources */,
 				DD3DB422222D614A007DB7F3 /* YDJSongsResponse.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
